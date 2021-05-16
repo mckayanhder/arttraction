@@ -216,8 +216,8 @@ how to remove the virtical space around the range input in IE*/
 /*  */
 @media (max-width: 900px) {
 	body {
-		height: fit-content;
-		overflow: visible;
+		height: 100vh;
+		overflow: hidden;
 	}
 
 	ul h2 {
