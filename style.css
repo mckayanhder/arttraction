@@ -1,0 +1,356 @@
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	overflow: hidden;
+	font-family: "Poppins", sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+ul h2 {
+	float: left;
+	margin-left: 50px;
+	margin-top: 30px;
+	padding: 20px;
+	position: fixed;
+	text-align: center;
+	border-radius: 5px;
+	color: black;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+
+li a {
+	display: block;
+	position: absolute;
+	color: black;
+	text-align: center;
+	padding: 16px 16px;
+	text-decoration: none;
+	margin-right: 100px;
+	border-radius: 5px;
+	top: 30px;
+	right: 100px;
+	font-size: 20px;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: rgba(51, 51, 51, 0.676);
+	color: white;
+}
+
+.ptext {
+	position: absolute;
+	top: 80px;
+	padding: 0 20px;
+	border-radius: 10px;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+
+p {
+	color: black;
+}
+
+.subtext {
+	position: relative;
+	margin-top: -15px;
+}
+
+canvas {
+	display: block;
+	position: relative;
+	transform: scale(0.6);
+	width: auto;
+	height: 80vh;
+}
+
+button {
+	position: fixed;
+	bottom: 20%;
+	right: 33%;
+	border: none;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+
+.labels {
+	position: fixed;
+	right: 10%;
+	top: 15%;
+	padding: 20px;
+}
+
+.labels h3 {
+	margin-bottom: 60px;
+	text-size-adjust: 80%;
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+
+.Slider {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	background-color: black;
+}
+
+.ptext {
+	position: fixed;
+	left: 25%;
+}
+
+.save {
+	position: fixed;
+	bottom: 5%;
+	left: 10%;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+input[type="range"] {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: -85%;
+	right: -70%;
+	width: 10%;
+	padding: 40px;
+	background-color: transparent;
+	-webkit-appearance: none;
+}
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+	background: rgba(136, 134, 134, 0.683);
+	border: none;
+	border-radius: 2px;
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+	margin-top: -14px;
+	width: 16px;
+	height: 36px;
+	background: rgba(15, 15, 15, 0.971);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-track {
+	border: none;
+	border-radius: 2px;
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+	background: transparent;
+	border-color: transparent;
+	border-width: 14.8px 0;
+	color: transparent;
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+	background: #3f71a9;
+}
+input[type="range"]:focus::-ms-fill-upper {
+	background: #477dba;
+}
+
+button {
+	position: fixed;
+	top: 90%;
+	left: 40%;
+	height: 50px;
+	width: 200px;
+	font-size: 20px;
+	padding: 10px;
+	color: black;
+	border-radius: 5px;
+	background: #f5f5f5;
+	box-shadow: 20px 20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+
+button:hover {
+	background: rgba(37, 37, 37, 0.683);
+	color: white;
+}
+
+.presstosave {
+	display: none;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+/* @supports (-ms-ime-align: auto) { */
+/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+/* input[type="range"] {
+    margin: 0; */
+/*Edge starts the margin from the thumb, not the track as other browsers do*/
+/* 
+
+/*  */
+@media (max-width: 900px) {
+	body {
+		height: fit-content;
+		overflow: visible;
+	}
+
+	ul h2 {
+		position: absolute;
+		left: -30px;
+		top: -10px;
+	}
+
+	.ptext {
+		display: none;
+	}
+
+	canvas {
+		transform: scale(0.4);
+		position: absolute;
+		right: -250px;
+		bottom: 150px;
+		border-bottom: solid 1px black;
+	}
+
+	input[type="range"] {
+		display: inline-block;
+		flex-direction: row;
+		position: relative;
+		top: 575px;
+		right: -5%;
+		width: 10%;
+		padding: 40px;
+		background-color: transparent;
+		-webkit-appearance: none;
+		z-index: 3;
+	}
+	input[type="range"]:focus {
+		outline: none;
+	}
+	input[type="range"]::-webkit-slider-runnable-track {
+		background: rgba(136, 134, 134, 0.683);
+		border: none;
+		border-radius: 2px;
+		width: 100%;
+		height: 3px;
+		cursor: pointer;
+	}
+	input[type="range"]::-webkit-slider-thumb {
+		margin-top: -14px;
+		width: 20px;
+		height: 35px;
+		background: rgba(15, 15, 15, 0.971);
+		border: none;
+		border-radius: 3px;
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
+
+	input[type="range"]::-moz-range-track {
+		border: none;
+		border-radius: 2px;
+		width: 100%;
+		height: 8.4px;
+		cursor: pointer;
+	}
+
+	input[type="range"]::-ms-track {
+		background: transparent;
+		border-color: transparent;
+		border-width: 14.8px 0;
+		color: transparent;
+		width: 100%;
+		height: 8.4px;
+		cursor: pointer;
+	}
+	input[type="range"]:focus::-ms-fill-lower {
+		background: #3f71a9;
+	}
+	input[type="range"]:focus::-ms-fill-upper {
+		background: #477dba;
+	}
+
+	li a {
+		position: absolute;
+		right: -10%;
+	}
+
+	.Slider {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		background-color: black;
+	}
+
+	.labels {
+		display: flex;
+		flex-wrap: wrap;
+		position: fixed;
+		top: 515px;
+		left: 50px;
+	}
+
+	.labels h3 {
+		margin-right: 60px;
+	}
+	.blabel {
+		position: relative;
+		left: 50px;
+	}
+
+	.clabel {
+		position: relative;
+		bottom: 15px;
+		left: 10px;
+	}
+
+	.dlabel {
+		position: relative;
+		left: 65px;
+		bottom: 15px;
+	}
+
+	button {
+		position: absolute;
+		left: 25%;
+	}
+
+	.save {
+		display: none;
+	}
+
+	.presstosave {
+		display: inherit;
+		position: absolute;
+		top: 52%;
+		right: 57%;
+		font-size: 13px;
+	}
+}
