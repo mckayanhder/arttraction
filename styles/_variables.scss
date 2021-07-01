@@ -1,0 +1,29 @@
+// base color variables
+
+$bg: #1a1919;
+$darkBlue: #455575;
+$ligthBlue: #78e0dc;
+$txtColor: white;
+$helio: #c0bbbcad;
+$green: #3a7d44;
+
+//mixins
+
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flexDir($dir) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $dir;
+}
+
+@mixin flexBetween {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
