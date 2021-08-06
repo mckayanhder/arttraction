@@ -1,11 +1,30 @@
 // base color variables
 
-$bg: #1a1919;
-$darkBlue: #455575;
-$ligthBlue: #78e0dc;
-$txtColor: white;
-$helio: #c0bbbcad;
-$green: #3a7d44;
+$lightBG: #fff;
+$darkBG: #00000077;
+$txtDark: rgb(0, 0, 0);
+$txtLight: white;
+$ctLight: grey;
+
+$DMlightBG: #000103d0;
+$DMdarkBG: #00010396;
+$DMtxtDark: #ffffff;
+$DMtxtLight: #FFFFFA;
+
+:root {
+	--bg-color: #{$lightBG};
+	--color-text: #{$txtLight};
+	--dark-background: #{$darkBG};
+	--color-card-text: #{$txtDark};
+	--ct-bg: #{$ctLight};
+  }
+  
+  [data-theme="dark"] {
+	--bg-color: #{$DMlightBG};
+	--color-text: #{$DMtxtLight};
+	--dark-background: #{$DMdarkBG};
+	--color-card-text: #{$DMtxtDark};
+  }
 
 //mixins
 
@@ -26,4 +45,25 @@ $green: #3a7d44;
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+@mixin card {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 10vw;
+	height: 10vw;
+	padding: 1vw;
+	color: var(--color-text);
+	background: var(--dark-background);
+	border-radius: 10px;
+	overflow-y: scroll;
+	margin: 1rem;
+}
+@mixin cardLabel {
+	display: flex;
+	background: var(--dark-background);
+	flex-wrap: wrap;
+	padding: 1vw;
+	border-radius: 10px;
 }
